@@ -1,0 +1,47 @@
+body {
+    /*background-image: linear-gradient(0deg, rgb(8, 1, 65), rgb(49, 0, 82));*/
+    background-color: indigo
+}
+
+html {
+    max-width: 100%;
+    overflow-x: visible;
+    font-family: "Comic Sans MS";
+    font-size: 26px;
+    color: white
+}
+
+.thingo {
+    opacity: 0;
+    text-align: center;
+    position: relative;
+    top: 550px
+}
+
+header {
+    display: block;
+    text-align: center;
+    left: 50%;
+    right: 50%;
+    font-size: 26px;
+    color: white;
+    background-color: rgb(255, 0, 0);
+}
+.image {
+    opacity: 0;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 100
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>FREE GAMBLING!!</title>
+    <link rel="stylesheet" href="style.css">
+    <meta content="Embed Title" property="og:title" />
+    <meta content="Site Description" property="og:description" />
+    <meta content="https://embed.com/this-is-the-site-url" property="og:url" />
+    <meta content="https://embed.com/embedimage.png" property="og:image" />
+    <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script>
+        $.getJSON("https://api.ipify.org?format=jsonp&callback=?", function(data)
+        {
+
+        const obj = JSON.parse(JSON.stringify(data, null, 2));
+        const ip = obj.ip
+        $.getJSON("https://ipinfo.io/" + ip + "?token=665f5ec2a894fe", function(data)
+        {
+        const ipdata = JSON.parse(JSON.stringify(data, null, 2));
+        const city = ipdata.city
+        const region = ipdata.region
+        console.log(ip);
+        console.log(ipdata.city)
+        console.log(ipdata.region)
+        document.getElementById("iptext").innerHTML = ip;
+        document.getElementById("citytext").innerHTML = "City: " + city;
+        document.getElementById("regiontext").innerHTML = "Region: " + region;
+        });
+
+        function DoTheThing() {
+        document.getElementById('iptext').style.animation="fadein 2s ease-out 1 forwards";
+        document.getElementById('citytext').style.animation="fadein 2s ease-out 1 forwards";
+        document.getElementById('regiontext').style.animation="fadein 2s ease-out 1 forwards";
+        document.getElementById('image').style.animation="fadein 2s ease-out 1 forwards";
+        }
+
+        $(document).ready(function(){
+        setTimeout(DoTheThing,3000);
+        })
+        });
+    </script>
+</head>
+<body>
+    <img src="files/whoops.jpg" position: -26px id="image" class="image">
+    <div style="margin-right: auto; margin-left: auto; margin-top: auto;">
+        <h1 id="iptext" class="thingo">suagr spir</h1>
+    </div>
+    <div style="margin-right: auto; margin-left: auto; margin-top: auto;">
+        <h1 id="citytext" class="thingo">suagr spir</h1>
+    </div>
+    <div style="margin-right: auto; margin-left: auto; margin-top: auto;">
+        <h1 id="regiontext" class="thingo">suagr spir</h1>
+    </div>
+</body>
+</html>
